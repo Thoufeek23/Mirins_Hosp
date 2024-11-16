@@ -161,7 +161,7 @@ footer a:hover {
 }
 
 /* Forms */
-form {
+/*form {
     background: white;
     padding: 2rem;
     border-radius: 8px;
@@ -208,8 +208,8 @@ form button {
 
 form button:hover {
     background: #f54b73;
-    transform: translateY(-3px); /* Lift effect */
-}
+    transform: translateY(-3px); /* Lift effect 
+}*/
 
 /* Animations */
 @keyframes fadeIn {
