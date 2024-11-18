@@ -232,6 +232,200 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* Patient Feedback Section */
+.patient-feedback {
+    padding: 3rem 1rem;
+    background-color: #fef7fa;
+}
+
+.patient-feedback h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f78fb3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Feedback Cards Container */
+.feedback-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Individual Feedback Card */
+.feedback-card {
+    background: #fff;
+    border-left: 4px solid #f78fb3;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Feedback Details */
+.feedback-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.feedback-card .feedback-message {
+    font-size: 1rem;
+    color: #555;
+    font-style: italic;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+/* Decorative Dash */
+.feedback-dash {
+    display: block;
+    font-size: 2rem;
+    color: #f78fb3;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    line-height: 0;
+}
+
+/* Feedback Date */
+.feedback-date {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #888;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Features and Facilities Section */
+.features-facilities {
+    padding: 3rem 1rem;
+    background-color: #fef9f9;
+}
+
+.features-facilities h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f78fb3;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Features Container */
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* Feature Card */
+.feature-card {
+    background: #fef7fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Icon */
+.feature-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+/* Feature Title */
+.feature-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Meet Our Doctors Section */
+.meet-our-doctors {
+    padding: 3rem 1rem;
+    background-color: #fef7fa;
+}
+
+.meet-our-doctors h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #f78fb3;
+}
+
+/* Doctor Cards Container */
+.doctor-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Individual Doctor Card */
+.doctor-card {
+    background: #ffe3e7;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Doctor Photo */
+.doctor-photo {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #f78fb3;
+}
+
+/* Doctor Details */
+.doctor-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.doctor-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.doctor-card .doctor-bio {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
 footer {
     background-color: #f78fb3;
     color: white;
