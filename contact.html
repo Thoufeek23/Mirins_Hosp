@@ -22,3 +22,114 @@
             </nav>
         </div>
     </header>
+    <section class="contact-us">
+        <h1>Contact Us</h1>
+        <p class="intro">
+            Have questions, need assistance, or want to book an appointment? We're here to help. Reach out to us via the options below.
+        </p>
+
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <div class="contact-card">
+                <h2>Phone</h2>
+                <p><strong>24/7 Helpline:</strong> +91 1234567890</p>
+                <p><strong>Appointments:</strong> +91 0987654321</p>
+            </div>
+            <div class="contact-card">
+                <h2>Email</h2>
+                <p><strong>General Queries:</strong> info@mirins.com</p>
+                <p><strong>Support:</strong> support@mirins.com</p>
+            </div>
+            <div class="contact-card">
+                <h2>Address</h2>
+                <p>MIRINS Hospital,<br> I don't know,<br> Pattukotai, Thanjavur 12345</p>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map">
+            <h2>Find Us</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.441131744692!2d79.381282!3d10.3409519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afffdf772ac1db1%3A0x17604c0c439c1357!2sNasrin%20Safrin%20Hospital!5e0!3m2!1sen!2sin!4v1695468764234!5m2!1sen!2sin" 
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+            <p id="formStatus" style="display: none; text-align: center;"></p>            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 MIRINS Hospital. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS
+    emailjs.init('HPghT17EsnrVvHR3S'); // Replace YOUR_PUBLIC_KEY with the public key from your EmailJS account
+
+    // Handle the form submission
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Display status message element
+        const statusMessage = document.getElementById('formStatus');
+
+        // Gather the form data
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        };
+
+        // Validate the form fields
+        if (!formData.name || !formData.email || !formData.message) {
+            statusMessage.innerText = 'Please fill in all the fields.';
+            statusMessage.style.color = 'red';
+            statusMessage.style.display = 'block';
+            return;
+        }
+
+        // Send the email using EmailJS
+        emailjs
+            .send('service_2uhdiss', 'template_702j62s', formData) // Replace placeholders with your EmailJS Service and Template IDs
+            .then(() => {
+                // On success
+                statusMessage.innerText = 'Thank you! Your message has been sent successfully.';
+                statusMessage.style.color = 'green';
+                statusMessage.style.display = 'block';
+
+                // Clear the form
+                document.getElementById('contactForm').reset();
+            })
+            .catch((error) => {
+                // On error
+                console.error('EmailJS Error:', error);
+                statusMessage.innerText = 'An error occurred while sending your message. Please try again later.';
+                statusMessage.style.color = 'red';
+                statusMessage.style.display = 'block';
+            });
+    });
+</script>
